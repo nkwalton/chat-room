@@ -19,6 +19,7 @@ module.exports = function(grunt) {
                     'Gruntfile.js'
                 ],
                 tasks: [
+                    'hapi',
                     'clean',
                     'copy'
                 ],
