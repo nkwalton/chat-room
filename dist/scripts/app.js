@@ -31,6 +31,13 @@
             var firebaseRef = new Firebase("https://popping-inferno-546.firebaseio.com/");
             var rooms = $firebaseArray(firebaseRef.child('rooms'));
             
+            var messages = $FirebaseArray('rooms');
+            // add a new record to the list, add 
+            messages.$add({
+//                user: "peter pan",
+//                text: "Hello world"
+            });
+            
             return {
                 all: rooms
             };
@@ -38,7 +45,7 @@
      
 
         angular
-            .module('chatRoom', [])
+            .module('chatRoom', ['ui.bootstrap'])
             .factory('Room', ['$firebaseArray', Room]);
      })();
 

@@ -1,7 +1,9 @@
 
-<div class ="chat-rooms" ng-repeat="room in home.rooms">{{ home.rooms }}</div>
+<div class ="chat-rooms" ng-repeat="Room in home.rooms">{{ home.rooms }}</div>
 
 <!--
 
-chat-rooms is our class, ngRepeat "room in home.rooms", room is the array of all the data for one chat-room, home.rooms is calling rooms factory in the home controller, all the data for all chat-rooms. {{ home.rooms}} prints an array of rooms.   
+chat-rooms is our class, ngRepeat "room in home.rooms", room is the array of all the data for one chat-room, home.rooms is calling rooms factory in the home controller, all the data for all chat-rooms. {{ home.rooms}} prints an array of rooms.
+
+In this case, the array is the data stored in the rooms variable in the Room service.
 -->
