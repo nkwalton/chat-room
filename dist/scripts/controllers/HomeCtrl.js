@@ -3,25 +3,25 @@
 
 
  (function() {
-        function HomeCtrl(Room, $firebaseArray) {
-          $scope.rooms = Room.all; 
+        function HomeCtrl(Room, $uibModal) {
+            this.rooms = Room.all;
+//            this.rooms =["array"];
+            
+            this.setRoom = function(room) {
+                this.currentRoom = room;
+            };
+            
+            this.open = function() {
+                var modalInstance = $uibModal.open({
+                    controller: 'ModalCtrl as modal',
+                    templateUrl: '/templates/modal.html'
+                });
+                
+            };
+            
         }
- 
 
         angular
-            .module('chatRoom', [])
-            .controller('HomeCtrl', ['Room', '$firebaseArray', HomeCtrl]);
+            .module('chatRoom')
+            .controller('HomeCtrl', ['Room', '$uibModal', HomeCtrl])
  })();
-
-
-// --------------------------------------------------
-//  function LandingCtrl() {
-//      this.heroTitle = "Turn the Music Up!";
-//  }
-//Using the 'this' keyword adds heroTitle as a property on the LandingCtrl's $scope object. $scope properties contain the model, or data, that the view will present, and are available to the template at the point in the DOM where the controller is registered. The LandingCtrl for Bloc Jams is registered for the landing.html template.
-
-// then, corresponding to the template... 
-//
-//  <section class="hero-content">
-//      <h1 class="hero-title">{{ landing.heroTitle }}</h1>
-//  </section>

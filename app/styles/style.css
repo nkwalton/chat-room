@@ -1,0 +1,33 @@
+/*
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    width: 430px; height: 100%; float: left;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+}
+*/
+
+/*
+.logoContainer {
+    position: fixed;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    width: 400px;
+    height: 200px;
+    background-image: url(../assets/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    z-index: 2;
+}
+*/
